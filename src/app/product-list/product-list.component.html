@@ -1,0 +1,23 @@
+<div class="select-container">
+    <select (change)="sortProducts($event)">
+      <option value="nameAsc">Alphabetically A-Z</option>
+      <option value="nameDesc">Alphabetically Z-A</option>
+      <option value="priceAsc">Price Low to High</option>
+      <option value="priceDesc">Price High to Low</option>
+    </select>
+  </div>
+  <br>
+  <br>
+  
+  <div class="product-list">
+    <div *ngFor="let product of products" class="product-item">
+      <div class="image-container">
+        <img src="{{ product.imageUrl }}" alt="{{ product.name }}" class="product-image">
+      </div>
+      <h2>{{ product.name }}</h2>
+      <p>{{ product.description }}</p>
+      <p>Price: ${{ product.price }}</p>
+      <button (click)="viewProduct(product.id)">View Details</button>
+    </div>
+  </div>
+  

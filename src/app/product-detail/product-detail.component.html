@@ -1,0 +1,10 @@
+<div class="product-detail-container" *ngIf="product">
+    <img src="{{ product.imageUrl }}" alt="{{ product.name }}" class="product-image">
+    <div class="product-info">
+      <h1>{{ product.name }}</h1>
+      <p class="product-description">{{ product.description }}</p>
+      <p class="product-price">$ {{ product.price }}</p>
+      <button class="back-button" (click)="goBack()">Back to Products</button>
+    </div>
+  </div>
+  
